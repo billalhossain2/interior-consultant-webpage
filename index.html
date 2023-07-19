@@ -1,16 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interior Consultant</title>
     <!-- font awesome icons  -->
-    <script src="https://kit.fontawesome.com/5cb82b043a.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/5cb82b043a.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- custom css  -->
-    <link rel="stylesheet" href="css/interior-consultant.css">
-     <!-- <i class="fa-solid fa-bars"></i> -->
-</head>
-<body>
-   
-</body>
+    <link rel="stylesheet" href="css/interior-consultant.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h3 class="navigation-title">This Interior</h3>
+        <div>
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-xmark"></i>
+          <ul id="nav-list">
+            <li><a href="">Home</a></li>
+            <li><a href="">Collection</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- interior section  -->
+      <section class="interior-section">
+         <div class="banner">
+           <div class="banner-content">
+             <h3 class="banner-title">Modern interior</h3>
+             <p class="banner-description">A full-Service residential & commercial interior design and staging company offering professional organizing & eco-services.</p>
+             <button class="banner-read-more-button">Read more</button>
+           </div>
+           <div class="banner-image-container">
+            <img src="./images/photo1.png" alt="Hero Image">
+            <div class="banner-badge-container">
+              <div class="designer">
+                <header class="badge-header">
+                  <img src="./images/photo2.png" alt="Interior Designer Profile Photo" class="designer-image">
+                <div class="designer-info">
+                  <h4 class="designer-name">Aliza Webber</h4>
+                  <p class="designer-designation">Interior designer</p>
+                </div>
+                </header>
+                <footer class="bage-footer"><p>Designed in 2020 by Aliza Webber</p></footer>
+              </div>
+            </div>
+           </div>
+         </div>
+      </section>
+    </main>
+    <footer>
+      <p>created by <span class="user-name">Md. Billal Hossain</span> - devChallenges.io</p>
+    </footer>
+
+    <script>
+      const threeBarsIcon = document.querySelector(".fa-bars");
+      const crossIcon = document.querySelector('.fa-xmark');
+
+      const navLiksList = document.getElementById("nav-list");
+
+      threeBarsIcon.addEventListener("click", () => {
+        navLiksList.style = "right:0";
+        crossIcon.style.display = "block"
+        threeBarsIcon.style.display = "none"
+      });
+
+      crossIcon.addEventListener('click', ()=>{
+        navLiksList.style = "right:-200px";
+        crossIcon.style.display = "none"
+        threeBarsIcon.style.display = "block"
+      })
+    </script>
+  </body>
 </html>
